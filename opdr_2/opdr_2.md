@@ -14,9 +14,10 @@ INSERT INTO `customers` (`id`, `first_name`, `last_name`, `email`, `address`, `p
 
 ### Opdracht 3
 * Geef de query om de eerste 10 boekingen te verwijderen (reservations)
-
+DELETE FROM reservations ORDER BY id LIMIT 10; 
 
 ### Opdracht 4
 * De klant met id 13 is verhuist naar 'De van der veldensteeg 81' in 'Apeldoorn'.
 * Pas het record aan en geef de query
 * Toon het record en controleer of de gegevens correct zijn.
+UPDATE customers SET address = 'De van der Veldensteeg 81', postal_code = '1234AB', city = 'Apeldoorn', country_code = 'nl_NL' WHERE id = 13; 
