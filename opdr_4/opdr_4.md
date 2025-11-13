@@ -6,16 +6,16 @@ Theorie kun je vinden op: https://www.edutorial.nl/dbq/introductie/
 
 ### Queries reisbureau
 * Geef de namen van de klanten die in Rotterdam wonen
-
+SELECT klanten.Naam FROM klanten WHERE klanten.Plaats = 'rotterdam'; 
 
 * Geef de namen van de klanten die geen reis geboekt hebben.
-
+SELECT klanten.naam FROM klanten LEFT JOIN boekingen ON klanten.Klantnummer = boekingen.Klantnummer WHERE boekingen.Klantnummer IS NULL; 
 
 * Hoeveel klanten komen er niet uit Rotterdam
-
+SELECT * FROM `klanten` WHERE klanten.Plaats != 'rotterdam'; 
 
 * Hoeveel reizen hebben als bestemming Afrika?
-
+SELECT * FROM reizen WHERE Bestemmingcode IN ('ALEXA', 'CAIRO', 'CASSA', 'ELALA', 'RABAT', 'TANGE', 'THEBE'); 
 
 * Hoeveel moeten de klanten, die naar Azië gaan, in totaal betalen?
 
